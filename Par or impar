@@ -1,0 +1,183 @@
+from time import sleep
+par = []
+
+impar = []
+
+print("Pares e Impares")
+
+def add():
+  sleep(0.5)
+  print("O número será analisado e adicionado na sua respectiva pilha")
+  n = int(input("Digite o número a ser adicionado: ")) 
+  if n % 2 == 0:
+    par.append(n)
+  else:
+    impar.append(n)
+    
+
+def fora ():
+  sleep(0.5)
+  print("Escolha a pilha: ")
+  opcao = int(input("[0]Par/[1]Impar "))
+  if opcao == 0:
+      par.pop()
+      print(par)
+      
+  elif opcao == 1:
+      impar.pop()
+      print(impar)
+      
+  else:
+      print("Opção não encontrada. ")
+
+
+def buscar():
+    sleep(0.5)
+    ele = int(input("Digite o elemento desejado: "))
+    if ele in par:
+      print(ele)
+      print("Encontrado na pilha dos pares")
+      print(par)
+    elif ele in impar:
+      print(ele)
+      print("Encontrado nos impares. ")
+      print(impar)
+
+def imprimir():
+  sleep(0.5)
+  print(f"Pares: {par} ")
+  print(f"Impares: {impar} ")
+
+def destruir():
+  sleep(0.5)
+  des = int(input("[0]Par/[1]Impar"))
+  if des == 0:
+    par.clear()
+  if des == 1:
+    impar.clear()
+  print("Pilha destruida")
+def qtde():
+    sleep(0.5)
+    print(f"{len(par)} número(s) pares. ")
+  
+    print(f"{len(impar)} números(s) impares. ")
+
+while True:  
+  sleep(0.5)
+  op = int(input("""Escolha uma opção: 
+  [0] Para parar o programa
+  [1] Para adicionar elementos
+  [2] Para excluir elementos
+  [3] Para buscar elementos
+  [4] Para imprimir pilhas
+  [5] Para destruir pilha
+  [6] Quantidade de elementos 
+  
+  """))
+  
+  if op == 0:
+     break
+  if op == 1:
+     add()
+  if op == 2:
+     fora()
+  if op == 3:
+      buscar()
+  if op == 4:
+      imprimir()
+  if op == 5:
+      destruir()
+  if op == 6:
+      qtde()
+   from time import sleep
+par = []
+
+impar = []
+
+print("Pares e Impares")
+
+def add():
+  sleep(0.5)
+  print("O número será analisado e adicionado na sua respectiva pilha")
+  n = int(input("Digite o número a ser adicionado: ")) 
+  if n % 2 == 0:
+    par.append(n)
+  else:
+    impar.append(n)
+    
+
+def fora ():
+  sleep(0.5)
+  print("Escolha a pilha: ")
+  opcao = int(input("[0]Par/[1]Impar "))
+  if opcao == 0:
+      par.pop()
+      print(par)
+      
+  elif opcao == 1:
+      impar.pop()
+      print(impar)
+      
+  else:
+      print("Opção não encontrada. ")
+
+
+def buscar():
+    sleep(0.5)
+    ele = int(input("Digite o elemento desejado: "))
+    if ele in par:
+      print(ele)
+      print("Encontrado na pilha dos pares")
+      print(par)
+    elif ele in impar:
+      print(ele)
+      print("Encontrado nos impares. ")
+      print(impar)
+
+def imprimir():
+  sleep(0.5)
+  print(f"Pares: {par} ")
+  print(f"Impares: {impar} ")
+
+def destruir():
+  sleep(0.5)
+  des = int(input("[0]Par/[1]Impar"))
+  if des == 0:
+    par.clear()
+  if des == 1:
+    impar.clear()
+  print("Pilha destruida")
+def qtde():
+    sleep(0.5)
+    print(f"{len(par)} número(s) pares. ")
+  
+    print(f"{len(impar)} números(s) impares. ")
+
+while True:  
+  sleep(0.5)
+  op = int(input("""Escolha uma opção: 
+  [0] Para parar o programa
+  [1] Para adicionar elementos
+  [2] Para excluir elementos
+  [3] Para buscar elementos
+  [4] Para imprimir pilhas
+  [5] Para destruir pilha
+  [6] Quantidade de elementos 
+  
+  """))
+  
+  if op == 0:
+     break
+  if op == 1:
+     add()
+  if op == 2:
+     fora()
+  if op == 3:
+      buscar()
+  if op == 4:
+      imprimir()
+  if op == 5:
+      destruir()
+  if op == 6:
+      qtde()
+   
