@@ -1,0 +1,86 @@
+from tad import operacoes
+print("Bem vindo ao cadastro de alunos: ")
+operacoes()
+
+def operacoes():
+  from time import sleep
+  cadastro_geral = []
+  mfturma = []
+  contmf = 0
+  cont = 0
+  alu = 0
+  while True:
+    opcao = int(input(""" Escolha uma opção: 
+          [0] Para sair do programa
+          [1] Mudança de notas  
+          [2] Para remover um aluno
+          [3] Para adicionar aluno 
+          [4] Média Aritmética da turma
+          -> """))
+    if opcao == 0:
+        for x in range(len(cadastro_geral)):
+          print (cadastro_geral[x],)
+        print("Limpando a lista... ")
+        sleep(0.5)
+        cadastro_geral.clear()
+        print(cadastro_geral)
+        break
+    if opcao == 1:
+      for x in range(len(cadastro_geral)):
+        print (cadastro_geral[x],)
+      mu = int(input("Digite o índice: "))-1
+      n1 = float(input("Insira a Nota_1:"))
+      n2 = float(input("Insira a Nota_2:"))
+      cadastro_geral[mu][3] = f'Nota_1: {n1}'
+      cadastro_geral[mu][4] = f'Nota_2: {n2}'     
+      MF = (n1*0.4+n2*0.6).__round__(2)
+      mfturma.pop()
+      mfturma.append(MF)
+      cadastro_geral[mu][5] = f'Media: {MF}'
+      if MF >= 6:
+        cadastro_geral[mu][6] = f'Situação: Aprovado'
+      elif MF < 6:
+        cadastro_geral[mu][6] = f'Situação: Reprovado'
+      print(cadastro_geral)
+      print("-"*30)
+    if opcao == 2:
+        sleep(0.5)
+        print(cadastro_geral)
+        foice = int(input("Digite o índice: ")) -1
+        cadastro_geral.pop(foice)
+        print("-"*30)
+        print(cadastro_geral)
+        
+    if opcao == 3:
+      cont += 1
+      alu += 1
+      aluno = []
+      print("Cadastro de alunos, insira: ")
+      intro = f"{alu} - Dados Aluno_{alu} -> "
+      aluno.append(intro)
+      nome = str(input("Nome: "))
+      aluno.append(f"Nome: {nome} ")
+      mat = int(input("Matrícula: "))
+      aluno.append(f"Matrícula:{mat} ")
+      n1 = float(input("Nota_1: "))
+      aluno.append(f"Nota_1: {n1} ")
+      n2 = float(input("Nota_2: "))
+      aluno.append(f"Nota_2: {n2} ")
+      MF = (n1*0.4+n2*0.6).__round__(2)
+      mfturma.append(MF)
+      
+      aluno.append(f"Media: {MF}")
+      if MF >= 6:
+          sit = "Aprovado"
+          aluno.append(f'Situação: {sit}.')
+      if MF < 6:
+          sit = "Reprovado"
+          aluno.append(f"Situação: {sit}.")
+      
+      cadastro_geral.insert(cont, aluno)
+      print(cadastro_geral)
+
+    if opcao == 4:
+      aritmetica = sum(mfturma)/len(cadastro_geral)
+      print(f"A média final aritmetica da turma foi {aritmetica} ")
+      
